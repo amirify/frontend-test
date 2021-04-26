@@ -1,26 +1,36 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ProductCreate from './components/ProductCreate'
+import ProductList from './components/ProductList'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ProductCreate,
+    ProductList
   }
 }
 </script>
 
+<template>
+
+  <div class="uk-container uk-padding-large">
+    <ul class="uk-subnav uk-subnav-pill" uk-switcher="animation: uk-animation-fade">
+      <li><a href="#">ثبت محصول</a></li>
+      <li><a href="#">مشاهده مخصولات</a></li>
+    </ul>
+
+    <ul class="uk-switcher uk-margin">
+      <li>
+        <product-create/>
+      </li>
+      <li>
+        <ProductList/>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<style src="uikit/dist/css/uikit-rtl.min.css"></style>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
