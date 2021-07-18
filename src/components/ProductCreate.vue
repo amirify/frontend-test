@@ -130,7 +130,7 @@ export default {
       </div>
 
       <div class="uk-margin">
-        <DatePicker inline="true" v-model="displayDate"/>
+        <DatePicker v-model="displayDate"/>
       </div>
 
       <div class="uk-margin" v-if="selectOptions">
